@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: backend
-        image: todo-backend:latest
-        imagePullPolicy: IfNotPresent
+        image: achrafhebheb/todo-backend:v1.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 3001
         envFrom:

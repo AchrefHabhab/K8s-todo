@@ -119,8 +119,8 @@ spec:
     spec:
       containers:
       - name: backend
-        image: todo-backend:latest
-        imagePullPolicy: IfNotPresent
+        image: achrafhebheb/todo-backend:v1.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 3001
         envFrom:
@@ -182,8 +182,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: todo-frontend:latest
-        imagePullPolicy: IfNotPresent
+        image: achrafhebheb/todo-frontend:v1.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         resources:
