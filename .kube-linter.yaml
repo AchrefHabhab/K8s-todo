@@ -1,0 +1,8 @@
+checks:
+  # Disable overly strict checks for learning/development
+  doNotAutoAddDefaults: false
+  exclude:
+    - "no-read-only-root-fs"  # Too strict for learning
+    - "run-as-non-root"        # Too strict for learning
+    - "no-anti-affinity"       # Advanced feature, not needed yet
+    - "latest-tag"             # We'll fix this when pushing to Docker Hub
