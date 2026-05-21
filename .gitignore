@@ -33,6 +33,9 @@ CLAUDE.md
 AGENTS.md
 LEARNING_NOTES.md
 
+# Personal helper scripts
+git-push.sh
+
 # Docker
 *.dockerfile.bak
 
