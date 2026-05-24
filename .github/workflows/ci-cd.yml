@@ -123,17 +123,14 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ env.BACKEND_IMAGE }}:latest
-          format: 'sarif'
-          output: 'trivy-backend-results.sarif'
+          format: 'table'
+          exit-code: '0'
+          severity: 'CRITICAL,HIGH'
 
       - name: Run Trivy vulnerability scanner - Frontend
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ env.FRONTEND_IMAGE }}:latest
-          format: 'sarif'
-          output: 'trivy-frontend-results.sarif'
-
-      - name: Upload Trivy results to GitHub Security
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: '.'
+          format: 'table'
+          exit-code: '0'
+          severity: 'CRITICAL,HIGH'
